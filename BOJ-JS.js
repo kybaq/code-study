@@ -18,7 +18,7 @@ node.js 는 fs 모듈을 통해 파일 입/출력이 가능하기에, 이를 활
 2. 입력 데이터가 한 줄에 여러 개 들어올 경우 TODO -> const input = fs.readFileSync(filePath).toString().trim().split(' ');
 3. 입력 데이터가 여러 줄에 걸쳐 들어올 경우 TODO -> const input = fs.readFileSync(filePath).toString().trim().split('\n');
 
-이외에도 다양한 예시가 있으므로, 사용이 어렵다면 출처에 기재한한 블로그들을 참고하시길 바랍니다.
+이외에도 다양한 예시가 있으므로, 사용이 어렵다면 출처에 기재한 블로그들을 참고하시길 바랍니다.
 
 ## 참고 사항
 
