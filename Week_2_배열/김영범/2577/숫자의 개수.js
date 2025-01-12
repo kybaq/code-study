@@ -17,6 +17,7 @@ for (num of input) {
 let resultStr = String(result);
 let resultArr = [];
 
+// fill 메소드 사용해서 대체 가능
 for (let i = 0; i < 10; i++) {
   resultArr[i] = 0;
 }
@@ -25,4 +26,5 @@ for (let l = 0; l < resultStr.length; l++) {
   resultArr[resultStr[l]] += 1;
 }
 
+// forEach 도 사용 가능
 for (num of resultArr) console.log(num);
