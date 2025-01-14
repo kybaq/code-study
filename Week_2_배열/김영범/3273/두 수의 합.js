@@ -8,14 +8,14 @@ const numberArr = input[1].split(" ").map(Number);
 
 let count = 0;
 
-const seenValue = [];
+const seenValue = new Set();
 
 for (num of numberArr) {
   const complement = x - num;
 
-  if (seenValue.includes(complement)) count++;
+  if (seenValue.has(complement)) count++;
 
-  seenValue.push(num);
+  seenValue.add(num);
 }
 
 console.log(count);
