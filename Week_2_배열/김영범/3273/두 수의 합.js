@@ -13,9 +13,9 @@ const seenValue = [];
 for (num of numberArr) {
   const complement = x - num;
 
-  seenValue.push(num);
-
   if (seenValue.includes(complement)) count++;
+
+  seenValue.push(num);
 }
 
 console.log(count);
