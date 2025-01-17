@@ -1,8 +1,9 @@
+// 문제링크:https://www.acmicpc.net/problem/1406
+// 연결리스트
 const fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
 
 let lStack = input.shift().split("");
-
 let iter = Number(input.shift());
 
 let rStack = [];
