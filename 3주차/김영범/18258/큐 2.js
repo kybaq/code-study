@@ -11,23 +11,7 @@ const input = String(fs.readFileSync(filePath))
 input.splice(0, 1);
 
 const queue = [];
-
-// for (const command of input) {
-//   if (command.includes("push", 0)) {
-//     let value = command.split(" ")[1];
-//     queue.push(value);
-//   } else if (command.includes("pop")) {
-//     queue.length > 0 ? console.log(queue.shift()) : console.log(-1);
-//   } else if (command.includes("front")) {
-//     queue.length > 0 ? console.log(queue[0]) : console.log(-1);
-//   } else if (command.includes("back")) {
-//     queue.length > 0 ? console.log(queue[queue.length - 1]) : console.log(-1);
-//   } else if (command.includes("empty")) {
-//     queue.length < 1 ? console.log("0") : console.log("1");
-//   } else if (command.includes("size")) {
-//     console.log(queue.length);
-//   }
-// }
+const result = [];
 
 let frontIndex = 0;
 
@@ -60,14 +44,11 @@ const actions = (command, value) => {
 for (const commands of input) {
   const [command, value] = commands.split(" ");
 
-  if (frontIndex > 10000) {
-    queue.splice(0, frontIndex);
-    frontIndex = 0;
-  }
-
   if (command.includes("push")) {
     actions("push", parseInt(value));
   } else {
-    console.log(actions(command, value));
+    result.push(actions(command, value));
   }
 }
+
+console.log(result.join("\n"));
