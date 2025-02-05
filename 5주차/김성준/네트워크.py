@@ -51,7 +51,6 @@
 from collections import deque
 
 def explore_network(start, computers, is_checked):
-    """BFS 방식으로 네트워크 탐색"""
     queue = deque([start])
     is_checked[start] = True  # 현재 컴퓨터 방문 처리
 
@@ -64,8 +63,7 @@ def explore_network(start, computers, is_checked):
                 is_checked[next_computer] = True  # 방문 처리
                 queue.append(next_computer)  # 큐에 추가하여 다음 탐색
 
-def count_isolated_networks(n, computers):
-
+def solution(n, computers):  # 함수명을 solution으로 변경
     is_checked = [False] * n  # 방문 여부 체크 배열
     total_networks = 0  # 네트워크 개수 카운트
 
