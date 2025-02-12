@@ -32,7 +32,7 @@ data = input().split()
 N = int(data[0])
 paper = [list(map(int, data[i * N + 1 : (i + 1) * N + 1])) for i in range(N)]
 
-# 분할 정복 시작
+# 분할 정복
 divide_and_conquer(0, 0, N)
 
 print(count[-1])
