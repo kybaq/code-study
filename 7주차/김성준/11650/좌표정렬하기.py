@@ -57,7 +57,7 @@ N = int(sys.stdin.readline().strip())  # 첫 줄에서 N 입력 받기
 points = [tuple(map(int, sys.stdin.readline().split())) for _ in range(N)]  # N개의 (x, y) 좌표 입력 받기
 
 # 정렬 (x좌표 -> y좌표 순서)
-points.sort()  # 기본 정렬 기준이 (x, y)이므로 따로 key 설정이 필요 없음
+points.sort()  
 
 for x, y in points:
     print(x, y)
